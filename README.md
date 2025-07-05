@@ -22,12 +22,13 @@ Accurately predicting the market value of laptops requires understanding key tec
 
 ```text
 Laptop-Price-Prediction/
-├── data/                   # Raw and cleaned dataset (CSV)
-├── notebooks/              # Jupyter notebooks for EDA and modeling
-├── src/                    # Python scripts for preprocessing & modeling
-├── app/                    # Streamlit application
-├── requirements.txt        # Project dependencies
-└── README.md               # Project documentation
+├── Laptop Price Prediction.ipynb   # Jupyter notebook with full ML workflow
+├── data/
+│   ├── laptop_data.csv             # Raw dataset containing laptop specs and prices
+│   ├── df.pkl                      # Preprocessed DataFrame (used for Streamlit app)
+│   └── pipe.pkl                    # Trained ML pipeline (model + preprocessing)
+├── app.py                          # Streamlit app for user-facing price prediction
+└── README.md                       # Project documentation
 ```
 
 ## Technologies & Frameworks
@@ -66,13 +67,10 @@ cd laptop-price-prediction
 
 ### Step 2: Install Dependencies
 
-```bash
-pip install -r requirements.txt
-```
-
 ### Step 3: Launch the Application
 
 ```bash
+python3 app.py
 streamlit run app.py
 ```
 
